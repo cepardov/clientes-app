@@ -3,8 +3,7 @@ import { Cliente } from './cliente';
 
 @Component({
   selector: 'app-clientes',
-  templateUrl: './clientes.component.html',
-  styleUrls: ['./clientes.component.css']
+  templateUrl: './clientes.component.html'
 })
 export class ClientesComponent implements OnInit {
 
