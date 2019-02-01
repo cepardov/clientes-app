@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Cliente } from './cliente';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 
 @Injectable()
 export class ClienteService {
@@ -21,7 +20,7 @@ export class ClienteService {
     return this.http.post<Cliente>(this.urlEndPoint, cliente, {headers: this.httpHeaders})
   }
 
-  getCliente(id): Observable<Cliente>{
+  getCliente(id: number): Observable<Cliente>{
     return this.http.get<Cliente>(`${this.urlEndPoint}/${id}`)
   }
 

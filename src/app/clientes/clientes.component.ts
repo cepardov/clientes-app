@@ -37,7 +37,7 @@ export class ClientesComponent implements OnInit {
       if (result.value) {
 
         this.clienteService.delete(cliente.id).subscribe(
-          response => {
+          () => {
             this.clientes = this.clientes.filter(cli => cli !== cliente)
             swal.fire(
               'Cliente Eliminado!',
